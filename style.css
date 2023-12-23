@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #292b2c;
+  font-family: 'Century Gothic', sans-serif;
+  color: #fff;
+}
+
+.box {
+  width: 80%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  text-align: center;
+  margin: auto;
+  margin-top: 5%;
+  color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.box-img {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box:hover .box-img {
+  transform: scale(1.2);
+}
+
+.box h1 {
+  font-size: 40px;
+  letter-spacing: 4px;
+  font-weight: 100;
+  transition: color 0.3s ease-in-out;
+}
+
+.box:hover h1 {
+  color: #3949ab; /* Deep Blue color for hover */
+}
+
+.box h5 {
+  font-size: 20px;
+  letter-spacing: 3px;
+  font-weight: 100;
+}
+
+.box p {
+  text-align: justify;
+}
+
+.about-section {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+ul {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.box li {
+  display: inline-block;
+  margin: 6px;
+}
+
+.box li a {
+  color: #333;
+  text-decoration: none;
+  font-size: 24px;
+  transition: all ease-in-out 250ms;
+}
+
+.box li a:hover {
+  color: #3949ab; /* Deep Blue color for hover */
+}
+
+/* Replace the font-awesome classes for Facebook, Twitter, and Google+ with LinkedIn, Twitter, and Instagram */
+.box li a i.fa-facebook-square {
+  content: '\f08c'; /* Replace with the LinkedIn icon */
+}
+
+.box li a i.fa-twitter-square {
+  content: '\f099'; /* Replace with the Twitter icon */
+}
+
+.box li a i.fa-google-plus-square {
+  content: '\f16d'; /* Replace with the Instagram icon */
+}
