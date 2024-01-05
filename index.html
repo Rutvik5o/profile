@@ -3,27 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- Add this script to fetch GitHub projects -->
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    fetch("https://api.github.com/users/Rutvik5o/repos")
-      .then(response => response.json())
-      .then(repos => {
-        const projectsSection = document.querySelector("#projects-section");
-        repos.forEach(repo => {
-          const projectElement = document.createElement("div");
-          projectElement.innerHTML = `
-            <h3>${repo.name}</h3>
-            <p>${repo.description || "No description available."}</p>
-            <a href="${repo.html_url}" target="_blank">View on GitHub</a>
-          `;
-          projectsSection.appendChild(projectElement);
-        });
-      })
-      .catch(error => console.error("Error fetching GitHub projects:", error));
-  });
-</script>
-
+  <script src="https://use.fontawesome.com/d1341f9b7a.js"></script>
   <link rel="stylesheet" href="style.css">
   <title>Rutvik Prajapati - Web Developer</title>
 </head>
